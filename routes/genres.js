@@ -1,7 +1,9 @@
+const auth = require('../middleware/auth');
 const mongoose = require('mongoose');
 const express = require('express');
 const { Genre, validate } = require('../models/genre');
 const router = express.Router();
+const admin = require('../middleware/admin');
 
 // Get the list of genres
 router.get('/', async (req, res) => {
@@ -10,7 +12,8 @@ router.get('/', async (req, res) => {
 });
 
 // Create a new genres
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
+
     // Validating 
     // If invalidate, return 400 - Bad request
     const { error } = validate(req.body);
@@ -29,7 +32,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update a genre
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
     // Validating 
     // If invalidate, return 400 - Bad request
     const { error } = validate(req.body);
@@ -50,7 +53,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Deleting Genres
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', [auth, admin], async (req, res) => {
     // Look up and delete the genre
     // If not existing, return 404
     const genre = await Genre.findByIdAndDelete(req.params.id);

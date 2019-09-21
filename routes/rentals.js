@@ -5,11 +5,12 @@ const { Customer } = require('../models/customer');
 const { Movie } = require('../models/movie');
 const { Rental, validate } = require('../models/rental');
 const router = express.Router();
+const auth = require('../middleware/auth');
 
 Fawn.init(mongoose);
 
 // Get the list of rentals
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
     const rentals = await Rental.find().sort('-dateOut');
     res.send(rentals);
 });

@@ -3,6 +3,7 @@ const express = require('express');
 const { Movie, validate } = require('../models/movie');
 const { Genre } = require('../models/genre');
 const router = express.Router();
+const auth = require('../middleware/auth');
 
 // Get the list of movies
 router.get('/', async (req, res) => {
@@ -11,7 +12,7 @@ router.get('/', async (req, res) => {
 });
 
 // Create 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     // Validating 
     // If invalidate, return 400 - Bad request
     const { error } = validate(req.body);
@@ -41,7 +42,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
     // Validating 
     // If invalidate, return 400 - Bad request
     const { error } = validate(req.body);
@@ -69,7 +70,7 @@ router.put('/:id', async (req, res) => {
     res.send(movie);
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
     // Look up and delete the movie
     // If not existing, return 404
     const movie = await Movie.findByIdAndDelete(req.params.id);
