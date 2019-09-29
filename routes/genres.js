@@ -8,7 +8,6 @@ const admin = require('../middleware/admin');
 
 // Get the list of genres
 router.get('/', async (req, res) => {
-    throw new Error('Could not get the genres.');
     const genres = await Genre.find().sort('name');
     res.send(genres);
 });
@@ -63,6 +62,8 @@ router.delete('/:id', [auth, admin], async (req, res) => {
 
 // Get the genre by ID
 router.get('/:id', async (req, res) => {
+    if (!mongoose.Types.ObjectId.isValid(req.params.id))
+        return res.status(404).send('Invalid ID');
     // Look up the genre
     // If not existing, return 404
     const genre = await Genre.findById(req.params.id);
