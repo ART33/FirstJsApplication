@@ -78,17 +78,4 @@ router.get('/:id', async (req, res) => {
 
 })
 
-// // Get the Genre by name
-// router.get('/:id/:name', (req, res) => {
-//     // Look up the genre
-//     // If not existing, return 404
-//     const genre = genres.find(g => g.id === parseInt(req.params.id) && g.name === req.params.name);
-//     if (!genre) return res.status(404).send("The genre with the given name was not found");
-
-//     res.send(genre);
-
-// })
-
-
-
 module.exports = router;
