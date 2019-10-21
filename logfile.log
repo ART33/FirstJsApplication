@@ -461,3 +461,17 @@
 {"message":"da is not defined","stack":"ReferenceError: da is not defined\n    at router.post (C:\\Users\\Administrator\\Desktop\\firstApp\\vidly-demo\\routes\\movies.js:39:15)","level":"error","timestamp":"2019-10-19T09:22:54.928Z"}
 {"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-19T09:23:26.323Z"}
 {"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-19T09:23:27.351Z"}
+{"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-20T01:54:02.143Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-20T01:54:03.174Z"}
+{"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-20T05:51:49.223Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-20T05:51:50.262Z"}
+{"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-20T08:31:25.389Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-20T08:31:26.413Z"}
+{"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-20T09:07:40.256Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-20T09:07:41.286Z"}
+{"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-20T09:08:12.073Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-20T09:08:13.109Z"}
+{"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-20T09:28:51.827Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-20T09:28:52.847Z"}
+{"level":"info","message":"Listening on port 3900... ","timestamp":"2019-10-20T12:25:19.029Z"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2019-10-20T12:25:20.054Z"}
