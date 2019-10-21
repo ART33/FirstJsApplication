@@ -1,4 +1,0 @@
-{
-  "jwtPrivateKey": "1234",
-  "db": "mongodb+srv://vidly:1234@cluster0-ijg5z.azure.mongodb.net/test?retryWrites=true&w=majority"
-}
