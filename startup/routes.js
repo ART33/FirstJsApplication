@@ -1,4 +1,3 @@
-const root = require('../routes/root');
 const genres = require('../routes/genres');
 const customers = require('../routes/customers');
 const movies = require('../routes/movies');
@@ -15,7 +14,6 @@ module.exports = function(app) {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.static('public'));
   app.use(helmet());
-  app.use('/', root);
   app.use('/api/genres', genres);
   app.use('/api/customers', customers);
   app.use('/api/movies', movies);
